@@ -4,7 +4,8 @@ variable "region" {
     type = string
 }
 
+# vpc
 variable "vpc_cidr" {
     description = "VPCのCIDR"
-    default = "10.0.0.0/16"
+    type = string
 }
