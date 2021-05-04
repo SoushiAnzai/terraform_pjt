@@ -5,6 +5,12 @@ variable "region" {
 }
 
 # vpc
+variable "pjt_name" {
+    description = "Project名"
+    type = string
+}
+
+# vpc
 variable "vpc_cidr" {
     description = "VPCのCIDR"
     type = string
