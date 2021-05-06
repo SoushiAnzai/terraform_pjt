@@ -15,3 +15,9 @@ variable "vpc_cidr" {
     description = "VPCのCIDR"
     type = string
 }
+
+# subnet
+variable "subnet_cidr" {
+    description = "subnetのCIDR"
+    type = string
+}
