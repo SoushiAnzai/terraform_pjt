@@ -25,3 +25,13 @@ resource "aws_subnet" "private_db_subnet2" {
         Name = "${var.pjt_name}-private-subnet02"
     }
 }
+
+# DB接続用subnetグループ
+resource "aws_db_subnet_group" "db_subnet_group" {
+    name        = "db_subnet_groupe"
+    description = "It is a DB subnet group on wp_vpc."
+    subnet_ids  = [aws_subnet.private_db_subnet1.id, aws_subnet.private_db_subnet2.id]
+    tags = {
+        Name = "${var.pjt_name}-db-subnet-group"
+    }
+}
