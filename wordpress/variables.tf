@@ -22,8 +22,18 @@ variable "vpc_cidr" {
 }
 
 # subnet
-variable "subnet_cidr" {
-    description = "subnetのCIDR"
+variable "subnet_cidr_public01" {
+    description = "subnetのCIDR(public01)"
+    type = string
+}
+
+variable "subnet_cidr_private01" {
+    description = "subnetのCIDR(private01)"
+    type = string
+}
+
+variable "subnet_cidr_private02" {
+    description = "subnetのCIDR(private02)"
     type = string
 }
 

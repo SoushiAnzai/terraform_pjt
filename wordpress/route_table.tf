@@ -2,10 +2,10 @@ resource "aws_route_table" "public_rtb" {
     vpc_id = aws_vpc.wp_vpc.id
     route {
         cidr_block = var.rtb_public_cidr
-        gateway_id = aws_internet_gateway.wp-igw.id
+        gateway_id = aws_internet_gateway.wp_igw.id
     }
     tags = {
-        Name = "${var.pjt_name}_public_rtb"
+        Name = "${var.pjt_name}-public-rtb"
     }
 }
 
