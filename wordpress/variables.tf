@@ -21,3 +21,9 @@ variable "subnet_cidr" {
     description = "subnetのCIDR"
     type = string
 }
+
+# route_table
+variable "rtb_public_cidr" {
+    description = "route_table_publicのCIDR"
+    type = string
+}
