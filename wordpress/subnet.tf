@@ -8,6 +8,17 @@ resource "aws_subnet" "public_web_subnet1" {
     }
 }
 
+resource "aws_subnet" "public_web_subnet2" {
+    vpc_id     = aws_vpc.wp_vpc.id
+    cidr_block = var.subnet_cidr_public02
+    //パブリック IPv4 アドレスの自動割り当て
+    availability_zone       = "ap-northeast-1c"
+    map_public_ip_on_launch = true
+    tags = {
+        Name = "${var.pjt_name}-public-subnet02"
+    }
+}
+
 resource "aws_subnet" "private_db_subnet1" {
     vpc_id            = aws_vpc.wp_vpc.id
     cidr_block        = var.subnet_cidr_private01

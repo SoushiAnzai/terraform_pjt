@@ -1,11 +1,9 @@
-output "elastic_ip_web" {
-    value = aws_eip.web.public_ip
+//Webアクセス用にコンソール表示
+output "elb_dns_name" {
+    value = aws_lb.wp_elb.dns_name
 }
 
-output "wordpress-endpoint" {
-    value = "http://${aws_instance.web1.public_dns}/wordpress/wp-admin/install.php"
-}
-
-output "db-address" {
-    value = aws_db_instance.db1.address
+//WordPress設定用にコンソール表示
+output "rds_endpoint" {
+	value = aws_db_instance.db1.endpoint
 }

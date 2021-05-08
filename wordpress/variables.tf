@@ -27,6 +27,11 @@ variable "subnet_cidr_public01" {
     type = string
 }
 
+variable "subnet_cidr_public02" {
+    description = "subnetのCIDR(public02)"
+    type = string
+}
+
 variable "subnet_cidr_private01" {
     description = "subnetのCIDR(private01)"
     type = string
