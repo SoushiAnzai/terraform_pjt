@@ -13,7 +13,7 @@ resource "aws_efs_file_system" "wp_efs" {
 resource "aws_efs_mount_target" "efs_1a" {
     file_system_id  = aws_efs_file_system.wp_efs.id
     subnet_id       = aws_subnet.public_web_subnet1.id
-    security_groups = [aws_security_group.efs.id]
+    security_groups = [aws_security_group.efs_sg.id]
 }
 
 ####################
